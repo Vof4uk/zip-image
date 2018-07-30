@@ -28,13 +28,11 @@ public class ImageServiceTest {
 
 
     private URL validUrl;
-    private String notValidUrl;
     private byte[] body;
 
     @Before
     public void setup() throws MalformedURLException {
         this.validUrl = new URL("http://any.com");
-        this.notValidUrl = "eklfmwoiefijewoifm";
         this.body = new byte[]{1};
     }
 
@@ -73,7 +71,6 @@ public class ImageServiceTest {
 
         ResourceLocation resourceLocation = new ResourceLocation();
         resourceLocation.setUrl(validUrl.toString());
-        ResourceItem result = imageService.fromLocation(resourceLocation);
 
     }
 }
